@@ -17,10 +17,8 @@
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
+  "source_files": "OpinionzAlertView/Classes/**/*",
   "resource_bundles": {
-    "OpinionzRate": [
-      "Pod/Assets/Images/*.png"
-    ]
+    "OpinionzAlertView": "OpinionzAlertView/Assets/Images/*.png"
   }
 }

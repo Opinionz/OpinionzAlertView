@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/OpinionzAlertView.h
+../../../../../OpinionzAlertView/Classes/OpinionzAlertView.h

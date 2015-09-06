@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "439C831C49F1B8DAA5E9B22A"
+               BlueprintIdentifier = "54B830EE0A221A86AD7AE058"
                BuildableName = "OpinionzAlertView.bundle"
                BlueprintName = "Pods-OpinionzAlertView_Tests-OpinionzAlertView-OpinionzAlertView"
                ReferencedContainer = "container:Pods.xcodeproj">

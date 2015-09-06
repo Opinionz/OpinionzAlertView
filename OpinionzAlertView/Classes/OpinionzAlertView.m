@@ -311,28 +311,35 @@
         [self.iconImageView setImage:self.icon];
     }
     else if (self.iconType) {
+        
         NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"OpinionzAlertView" ofType:@"bundle"];
+        if (!bundlePath) {
+            
+            bundlePath = [[NSBundle bundleForClass:OpinionzAlertView.class] pathForResource:@"OpinionzAlertView" ofType:@"bundle"];
+        }
+        
+        NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
         NSString *imageName;
         
         switch (self.iconType) {
             case OpinionzAlertIconInfo:
                 
-                imageName = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"OpinionzAlertIconInfo" ofType:@"png"];
+                imageName = [bundle pathForResource:@"OpinionzAlertIconInfo" ofType:@"png"];
                 break;
             case OpinionzAlertIconWarning:
-                imageName = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"OpinionzAlertIconWarning" ofType:@"png"];
+                imageName = [bundle pathForResource:@"OpinionzAlertIconWarning" ofType:@"png"];
                 break;
             case OpinionzAlertIconSuccess:
-                imageName = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"OpinionzAlertIconSuccess" ofType:@"png"];
+                imageName = [bundle pathForResource:@"OpinionzAlertIconSuccess" ofType:@"png"];
                 break;
             case OpinionzAlertIconQuestion:
-                imageName = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"OpinionzAlertIconQuestion" ofType:@"png"];
+                imageName = [bundle pathForResource:@"OpinionzAlertIconQuestion" ofType:@"png"];
                 break;
             case OpinionzAlertIconStar:
-                imageName = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"OpinionzAlertIconStar" ofType:@"png"];
+                imageName = [bundle pathForResource:@"OpinionzAlertIconStar" ofType:@"png"];
                 break;
             case OpinionzAlertIconHeart:
-                imageName = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"OpinionzAlertIconHeart" ofType:@"png"];
+                imageName = [bundle pathForResource:@"OpinionzAlertIconHeart" ofType:@"png"];
                 break;
             default:
                 break;
@@ -341,8 +348,15 @@
         [self.iconImageView setImage:[[UIImage alloc] initWithContentsOfFile:imageName]];
     }
     else {
+        
         NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"OpinionzAlertView" ofType:@"bundle"];
-        NSString *imageName = [[NSBundle bundleWithPath:bundlePath] pathForResource:@"OpinionzAlertIconSuccess" ofType:@"png"];
+        if (!bundlePath) {
+            
+            bundlePath = [[NSBundle bundleForClass:OpinionzAlertView.class] pathForResource:@"OpinionzAlertView" ofType:@"bundle"];
+        }
+
+        NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+        NSString *imageName = [bundle pathForResource:@"OpinionzAlertIconSuccess" ofType:@"png"];
         [self.iconImageView setImage:[[UIImage alloc] initWithContentsOfFile:imageName]];
     }
     

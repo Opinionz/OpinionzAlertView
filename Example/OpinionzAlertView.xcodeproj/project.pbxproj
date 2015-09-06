@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19DB62C6AFB6AADC8CE5CCD7 /* Pods_OpinionzAlertView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5748152ACFABB7E232CA688E /* Pods_OpinionzAlertView_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		51AF5E55B046C5B714A6653D /* Pods_OpinionzAlertView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDF846AC96AB3AD08C22ECC /* Pods_OpinionzAlertView_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,7 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		D9AA49AE9F549531C6381158 /* Pods_OpinionzAlertView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650EB5C226CD873464AEA796 /* Pods_OpinionzAlertView_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		ED52D6BB0851E8191B5E6DA3 /* Pods_OpinionzAlertView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EEBFDA2C1741D07E9955C22 /* Pods_OpinionzAlertView_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,8 @@
 		04280A6EB5463247B4794D7D /* Pods-OpinionzAlertView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpinionzAlertView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpinionzAlertView_Tests/Pods-OpinionzAlertView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1571EA25EF9E2AA21A2FE3C6 /* Pods-OpinionzAlertView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpinionzAlertView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpinionzAlertView_Example/Pods-OpinionzAlertView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2A471BC6805BACBF364F53B8 /* Pods-OpinionzAlertView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpinionzAlertView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpinionzAlertView_Example/Pods-OpinionzAlertView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5748152ACFABB7E232CA688E /* Pods_OpinionzAlertView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpinionzAlertView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F58A195388D20070C39A /* OpinionzAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = OpinionzAlertView.app; path = OpinionzAlertView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEBFDA2C1741D07E9955C22 /* Pods_OpinionzAlertView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpinionzAlertView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* OpinionzAlertView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpinionzAlertView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -53,16 +53,16 @@
 		6003F5A5195388D20070C39A /* OPZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPZViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* OPZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPZViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = OpinionzAlertView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* OpinionzAlertView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpinionzAlertView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		650EB5C226CD873464AEA796 /* Pods_OpinionzAlertView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpinionzAlertView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB34A76899FFA02CF846651 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6DCA01B1906C09B05BB4FA80 /* OpinionzAlertView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OpinionzAlertView.podspec; path = ../OpinionzAlertView.podspec; sourceTree = "<group>"; };
 		7232F759B9CF4433F840B3F1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7DDF846AC96AB3AD08C22ECC /* Pods_OpinionzAlertView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpinionzAlertView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AD5A744B0B0FCF4C271B9DE8 /* Pods-OpinionzAlertView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpinionzAlertView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpinionzAlertView_Tests/Pods-OpinionzAlertView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				19DB62C6AFB6AADC8CE5CCD7 /* Pods_OpinionzAlertView_Example.framework in Frameworks */,
+				ED52D6BB0851E8191B5E6DA3 /* Pods_OpinionzAlertView_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				D9AA49AE9F549531C6381158 /* Pods_OpinionzAlertView_Tests.framework in Frameworks */,
+				51AF5E55B046C5B714A6653D /* Pods_OpinionzAlertView_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +108,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* OpinionzAlertView.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* OpinionzAlertView_Example.app */,
+				6003F5AE195388D20070C39A /* OpinionzAlertView_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				5748152ACFABB7E232CA688E /* Pods_OpinionzAlertView_Example.framework */,
-				650EB5C226CD873464AEA796 /* Pods_OpinionzAlertView_Tests.framework */,
+				5EEBFDA2C1741D07E9955C22 /* Pods_OpinionzAlertView_Example.framework */,
+				7DDF846AC96AB3AD08C22ECC /* Pods_OpinionzAlertView_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,8 +204,8 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				D3813D056A0FE4690DACE9F1 /* Embed Pods Frameworks */,
 				D0F0412982304E712B1E65AF /* Copy Pods Resources */,
+				78661453D69D492ACE358425 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,7 +213,7 @@
 			);
 			name = OpinionzAlertView_Example;
 			productName = OpinionzAlertView;
-			productReference = 6003F58A195388D20070C39A /* OpinionzAlertView.app */;
+			productReference = 6003F58A195388D20070C39A /* OpinionzAlertView_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* OpinionzAlertView_Tests */ = {
@@ -224,8 +224,8 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				F1A7A1F010FAC160AFDAD44C /* Embed Pods Frameworks */,
 				EDBF507F711ED7688AC21583 /* Copy Pods Resources */,
+				FA5C89EA6EB796C4758DD361 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,7 +234,7 @@
 			);
 			name = OpinionzAlertView_Tests;
 			productName = OpinionzAlertViewTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* OpinionzAlertView_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -308,6 +308,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		78661453D69D492ACE358425 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpinionzAlertView_Example/Pods-OpinionzAlertView_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0F0412982304E712B1E65AF /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,21 +336,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpinionzAlertView_Example/Pods-OpinionzAlertView_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3813D056A0FE4690DACE9F1 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpinionzAlertView_Example/Pods-OpinionzAlertView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E12CCAFA805E22FB301857D9 /* Check Pods Manifest.lock */ = {
@@ -368,7 +368,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpinionzAlertView_Tests/Pods-OpinionzAlertView_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1A7A1F010FAC160AFDAD44C /* Embed Pods Frameworks */ = {
+		FA5C89EA6EB796C4758DD361 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

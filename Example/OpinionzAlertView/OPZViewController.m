@@ -8,6 +8,8 @@
 
 #import "OPZViewController.h"
 
+#import <OpinionzAlertView/OpinionzAlertView.h>
+
 @interface OPZViewController ()
 
 @end
@@ -24,6 +26,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)buttonHandlerAlert:(id)sender {
+    
+    OpinionzAlertView *alertView = [[OpinionzAlertView alloc] initWithTitle:@"Title"
+                                                                    message:@"message"
+                                                          cancelButtonTitle:@"Cancel"
+                                                          otherButtonTitles:nil];
+    
+//    alertView = [[OpinionzAlertView alloc] initWithTitle:@"Title"
+//                                                 message:@"message"
+//                                       cancelButtonTitle:@"Cancel"
+//                                       otherButtonTitles:nil
+//                                 usingBlockWhenTapButton:^(OpinionzAlertView *alertView, NSInteger buttonIndex) {
+//                                     
+//                                     NSLog(@"Tapped button at index : %li", (long)buttonIndex);
+//                                 }];
+    
+    [alertView show];
 }
 
 @end

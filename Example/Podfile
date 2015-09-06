@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'OpinionzAlertView_Example', :exclusive => true do
+  pod "OpinionzAlertView", :path => "../"
+end
+
+target 'OpinionzAlertView_Tests', :exclusive => true do
+  pod "OpinionzAlertView", :path => "../"
+
+  
+end

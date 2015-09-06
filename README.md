@@ -24,37 +24,13 @@ pod 'OpinionzAlertView', '~> 0.1.0'
 ###Manual
 1. Add the OpinionzAlertView code into your project.
 
-
 Usage
 --------------
-1. Add `#import <OpinionzRate.h>`
-2. Call `[[OpinionzAlertView sharedInstance] promptForRating]` at your desired action
-
 NOTE: prompt it after your view did appeared
 
 ###Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-```objective-c
-//
-//  AppDelegate.m
-//  Demo
-//
-//  Created by Opinionz.io on 18/08/15.
-//  Copyright (c) 2015 Opinionz.io. All rights reserved.
-//
-
-#import <OpinionzRate.h>
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-// Override point for customization after application launch.
-
-[[OpinionzRate sharedInstance] setupWithAppStoreId:995007460];
-
-return YES;
-}
-```
 
 ```objective-c
 //
@@ -67,76 +43,103 @@ return YES;
 
 #import "ViewController.h"
 
-#import <OpinionzRate.h>
+#import <OpinionzAlertView/OpinionzAlertView.h>
 
-- (IBAction)buttonHandlerRate:(id)sender {
-//Optional customization
-//    [OpinionzRate sharedInstance].title = @"Do you love our app?";
-//    [OpinionzRate sharedInstance].message = @"Would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!";
-//    [OpinionzRate sharedInstance].cancelTitle = @"No, thanks";
-//    [OpinionzRate sharedInstance].rateTitle = @"Rate now";
-//    [OpinionzRate sharedInstance].rateLaterTitle = @"Remind me later";
+- (IBAction)buttonHandlerAlert:(id)sender {
 
-[[OpinionzRate sharedInstance] promptForRating];
+    OpinionzAlertView *alertView = [[OpinionzAlertView alloc] initWithTitle:@"Title"
+                                                                    message:@"message"
+                                                          cancelButtonTitle:@"Cancel"
+                                                          otherButtonTitles:nil];
+
+    //    alertView = [[OpinionzAlertView alloc] initWithTitle:@"Title"
+    //                                                 message:@"message"
+    //                                       cancelButtonTitle:@"Cancel"
+    //                                       otherButtonTitles:nil
+    //                                 usingBlockWhenTapButton:^(OpinionzAlertView *alertView, NSInteger buttonIndex) {
+    //                                     
+    //                                     NSLog(@"Tapped button at index : %li", (long)buttonIndex);
+    //                                 }];
+
+    [alertView show];
 }
+
 ```
 
 Configuration
 -------------
-You can set `title`, `message`, `cancelTitle`, `rateTitle` and `rateLaterTitle` messages. If some of them are not set, default values will be used.
+Set `title`, `message`, `cancelButtonTitle` and `otherButtonTitles`.
 
 Properties
 --------------
 
-The OpinionzRate has the following properties:
+The OpinionzAlertView has the following properties:
 ```objective-c
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) UIColor *color;
 ```
-Title of the rate popup (default is __"Enjoying _Application name_?"__
-
-```objective-c
-@property (nonatomic, strong) NSString *message;
-```
-Message of the rate popup (default is "__Would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!__"
-
+Color of header backgound
 
 ```objective-c
-@property (nonatomic, strong) NSString *cancelTitle;
+@property (nonatomic, strong) UIImage *icon;
 ```
-Cancel button title (default is __"No, Thanks"__
+Icon on header
+
+```objective-c
+@property (nonatomic, assign) OpinionzAlertIcon iconType;
+```
+
+Or you can choose icon type
+
+```objective-c
+typedef enum : NSUInteger {
+    OpinionzAlertIconInfo = 1,
+    OpinionzAlertIconWarning,
+    OpinionzAlertIconSuccess,
+    OpinionzAlertIconQuestion,
+    OpinionzAlertIconStar,
+    OpinionzAlertIconHeart
+} OpinionzAlertIcon;
+```
 
 
 ```objective-c
-@property (nonatomic, strong) NSString *rateTitle;
+@property (nonatomic, assign) id<OpinionzAlertViewDelegate> delegate;
 ```
-Rate button title (default is __"Rate me"__
+Alert view delegate
 
 ```objective-c
-@property (nonatomic, strong) NSString *rateLaterTitle;
+@property (nonatomic, copy) OpinionzPopupViewTapButtonBlock buttonDidTappedBlock;
 ```
-Rate later button title (default is __"Remind me later"__
+Alert view tap block
 
 
 Methods
 --------------
 
-The OpinionzRate class has the following methods:
-```objective-c
-+ (OpinionzRate *)sharedInstance;
-```
-Required method for getting single manager. The recommended way to set library into your application is to place a call to sharedInstance in your -application:didFinishLaunchingWithOptions: method.
-
+The OpinionzAlertView class has following methods:
 
 ```objective-c
-- (void)setupWithAppStoreId:(NSUInteger)appStoreID;
-```
-Register app with store id and start using Opinionz SDK.
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSArray *)otherButtonTitles;
 
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
+                     delegate:(id /*<OpinionzAlertViewDelegate>*/)delegate
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSArray *)otherButtonTitles;
 
-```objective-c
-- (void)promptForRating;
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSArray *)otherButtonTitles
+      usingBlockWhenTapButton:(OpinionzPopupViewTapButtonBlock)tapButtonBlock;
+
+- (void)show;
+
+- (void)dismiss;
 ```
-Show rate popup at your desired time
 
 Supported OS & SDK Versions
 -----------------------------
@@ -147,20 +150,15 @@ Supported OS & SDK Versions
 ARC Compatibility
 ------------------
 
-OpinionzRate requires ARC. 
+OpinionzAlertView requires ARC. 
 
-Protocols
----------------
-
-Thread Safety
---------------
 
 Release Notes
 ----------------
 
-Version 1.0
+Version 0.1.0
 
-- Release version.
+- Initial version.
 
 ## Author
 
@@ -168,5 +166,5 @@ Opinionz.io, support@opinionz.io
 
 ## License
 
-OpinionzRate is available under the MIT license. See the LICENSE file for more info.
+OpinionzAlertView is available under the MIT license. See the LICENSE file for more info.
 

@@ -2,8 +2,8 @@
 //  OPZAppDelegate.m
 //  OpinionzAlertView
 //
-//  Created by Armen on 09/06/2015.
-//  Copyright (c) 2015 Armen. All rights reserved.
+//  Created by Opinionz.io on 09/06/2015.
+//  Copyright (c) 2015 Opinionz.io. All rights reserved.
 //
 
 #import "OPZAppDelegate.h"

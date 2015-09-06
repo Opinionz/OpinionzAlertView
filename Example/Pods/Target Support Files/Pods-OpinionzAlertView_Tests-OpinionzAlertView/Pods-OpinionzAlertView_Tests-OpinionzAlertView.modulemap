@@ -1,0 +1,6 @@
+framework module OpinionzAlertView {
+  umbrella header "Pods-OpinionzAlertView_Tests-OpinionzAlertView-umbrella.h"
+
+  export *
+  module * { export * }
+}

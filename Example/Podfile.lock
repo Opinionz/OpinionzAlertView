@@ -1,0 +1,14 @@
+PODS:
+  - OpinionzAlertView (0.1.0)
+
+DEPENDENCIES:
+  - OpinionzAlertView (from `../`)
+
+EXTERNAL SOURCES:
+  OpinionzAlertView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  OpinionzAlertView: 9b67d0908adf162a0cb728456fd015c9b4fb1fa7
+
+COCOAPODS: 0.37.2

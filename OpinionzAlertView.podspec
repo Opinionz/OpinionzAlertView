@@ -16,10 +16,11 @@ Pod::Spec.new do |s|
     s.platform     = :ios, '7.0'
     s.requires_arc = true
 
-    s.source_files = 'OpinionzAlertView/Classes/**/*'
-#s.resource_bundles = {
+    s.source_files = 'OpinionzAlertView/Classes/*.{h,m}'
+#    s.resource_bundles = {
 #       'OpinionzAlertView' => ['OpinionzAlertView/Assets/Images/*.png']
 #   }
+
     s.resource_bundle = { 'OpinionzAlertView' => 'OpinionzAlertView/Assets/Images/*.png' }
     # s.public_header_files = 'OpinionzAlertView/Classes/**/*.h'
 end

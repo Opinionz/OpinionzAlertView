@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  OpinionzAlertView: a47551e4a7efd57535e3bd03a800f7e728dc74cb
+  OpinionzAlertView: 0f416f0a34aab564076e1e7079adcf512fc07566
 
 COCOAPODS: 0.37.2

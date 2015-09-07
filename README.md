@@ -18,7 +18,7 @@ OpinionzAlertView is available through [CocoaPods](http://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'OpinionzAlertView', '~> 0.1.0'
+pod 'OpinionzAlertView', '~> 0.2.0'
 ```
 
 ###Manual
@@ -156,7 +156,7 @@ OpinionzAlertView requires ARC.
 Release Notes
 ----------------
 
-Version 0.1.0
+Version 0.2.0
 
 - Initial version.
 

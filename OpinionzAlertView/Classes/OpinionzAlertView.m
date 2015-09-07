@@ -107,10 +107,16 @@
         [self addSubview:self.alertView];
 
         // background effect
-        UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
-        UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-        visualEffectView.frame = self.alertView.bounds;
-        [self.alertView addSubview:visualEffectView];
+        if (NSClassFromString(@"UIVisualEffectView") != nil) {
+            
+            UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+            UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+            visualEffectView.frame = self.alertView.bounds;
+            [self.alertView addSubview:visualEffectView];
+        } else {
+            
+            [self.alertView setBackgroundColor:[UIColor whiteColor]];
+        }
         
         // header view
         self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.alertView.bounds), headerHeight)];

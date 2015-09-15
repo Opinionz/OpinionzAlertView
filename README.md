@@ -1,6 +1,6 @@
 # OpinionzAlertView
 
-[![CI Status](http://img.shields.io/travis/Opinionz/OpinionzAlertView.svg?style=flat)](https://travis-ci.org/Armen/OpinionzAlertView)
+[![CI Status](http://img.shields.io/travis/Opinionz/OpinionzAlertView.svg?style=flat)](https://travis-ci.org/Opinionz/OpinionzAlertView)
 [![Version](https://img.shields.io/cocoapods/v/OpinionzAlertView.svg?style=flat)](http://cocoapods.org/pods/OpinionzAlertView)
 [![License](https://img.shields.io/cocoapods/l/OpinionzAlertView.svg?style=flat)](http://cocoapods.org/pods/OpinionzAlertView)
 [![Platform](https://img.shields.io/cocoapods/p/OpinionzAlertView.svg?style=flat)](http://cocoapods.org/pods/OpinionzAlertView)

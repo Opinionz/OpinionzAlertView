@@ -347,6 +347,12 @@
         }
         
         NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+        
+        if (!bundle) {
+            
+            bundle = [NSBundle mainBundle];
+        }
+        
         NSString *imageName;
         UIColor *headerColor;
         

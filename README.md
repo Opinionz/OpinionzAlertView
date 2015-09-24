@@ -10,6 +10,11 @@ Introduction
 
 Beautiful customizable alert view with blocks. Choose from predefined icons for info, warning, success and error alerts. Customize color or set your desired image.
 
+Preview
+--------------
+![Preview](https://raw.githubusercontent.com/Opinionz/OpinionzAlertView/assets/screenshots/animated.gif)
+
+
 Installation
 --------------
 ###Cocoapods

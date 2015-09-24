@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
     Beautiful customizable alert view with blocks. Choose from predefined icons for info, warning, success and error alerts. Customize color or set your desired image.
     DESC
 
-    s.homepage         = "https://opinionz.github.io/OpinionzAlertView"
-    # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+    s.homepage         = "https://opinionz.io/"
+    s.screenshots      = "https://raw.githubusercontent.com/Opinionz/OpinionzAlertView/assets/screenshots/animated.gif"
     s.license          = 'MIT'
     s.author           = { "Opinionz.io" => "support@opinionz.io"}
     s.source           = { :git => "https://github.com/Opinionz/OpinionzAlertView.git", :tag => s.version.to_s }

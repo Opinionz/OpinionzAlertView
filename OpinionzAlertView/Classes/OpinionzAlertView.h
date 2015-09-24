@@ -52,6 +52,8 @@ typedef void (^OpinionzPopupViewTapButtonBlock)(OpinionzAlertView *alertView, NS
 
 - (void)dismiss;
 
+- (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex;
+
 @end
 
 @protocol OpinionzAlertViewDelegate <NSObject>

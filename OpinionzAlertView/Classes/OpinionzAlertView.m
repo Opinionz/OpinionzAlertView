@@ -1,15 +1,15 @@
 //
-//  OpinionzRateView.m
-//  RatePopup
+//  OpinionzAlertView.m
+//  OpinionzAlertView
 //
-//  Created by Anatoli Petrosyants on 8/19/15.
-//  Copyright (c) 2015 Anatoli Petrosyants. All rights reserved.
+//  Created by Opinionz.io on 8/16/15.
+//  Copyright (c) 2015 Opinionz.io. All rights reserved.
 //
 
 #import "OpinionzAlertView.h"
 
 #define kOpinionzAlertWidth   280
-#define kOpinionzButtonHeight 41
+#define kOpinionzButtonHeight 44
 #define kOpinionzTitleHeight  40
 #define kOpinionzHeaderHeight 80
 
@@ -28,6 +28,9 @@
 @property (nonatomic, strong) UIView *alertView;
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) UIImageView *iconImageView;
+
+@property (nonatomic, strong) NSString *cancelButtonTitle;
+@property (nonatomic, strong) NSArray *otherButtonTitles;
 
 @end
 
@@ -69,7 +72,11 @@
 {
     self = [super init];
     if (self) {
+        
         self.delegate = delegate;
+        
+        self.cancelButtonTitle = cancelButtonTitle;
+        self.otherButtonTitles = otherButtonTitles;
         
         // helpers
         CGSize screenSize = [self screenSize];
@@ -85,13 +92,15 @@
         
         // buttons height calculation
         CGFloat buttonsHeight = 0;
-        if ((cancelButtonTitle && [otherButtonTitles count] <= 1) ||
-            ([otherButtonTitles count] < 2 && !cancelButtonTitle)) {
-            // 1 or 2 buttons
+        
+        if (cancelButtonTitle) {
             buttonsHeight = kOpinionzButtonHeight;
         }
-        else if (cancelButtonTitle && [otherButtonTitles count] > 1) {
-            buttonsHeight = kOpinionzButtonHeight + [otherButtonTitles count] * kOpinionzButtonHeight;
+        
+        // if more then 2 buttons, place buttons vertically, else show them horizontally
+        if ([otherButtonTitles count] > 1) {
+            
+            buttonsHeight += [otherButtonTitles count] * kOpinionzButtonHeight;
         }
         
         // alert height calculation
@@ -203,10 +212,8 @@
         }
 
         // setup other buttons
-        NSMutableArray *otherButtons = [[NSMutableArray alloc] init];
         for (int i = 0; i < [otherButtonTitles count]; i++) {
             UIButton *otherTitleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [otherButtons addObject:otherTitleButton];
             
             if ([otherButtonTitles count] == 1 && !cancelButtonTitle) {
                 // 1 other button and no cancel button
@@ -278,6 +285,21 @@
     return [UIFont boldSystemFontOfSize:16];
 }
 
+- (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex {
+    
+    NSString *buttonTitle;
+    
+    if (buttonIndex == 0) {
+        
+        buttonTitle = self.cancelButtonTitle;
+    }
+    else if(buttonIndex-1 < [self.otherButtonTitles count]) {
+    
+        buttonTitle = self.otherButtonTitles[buttonIndex-1];
+    }
+    return buttonTitle;
+}
+
 // MARK: alert button handler
 
 - (void)alertButtonDidTapped:(UIButton *)button {
@@ -326,32 +348,45 @@
         
         NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
         NSString *imageName;
+        UIColor *headerColor;
         
         switch (self.iconType) {
             case OpinionzAlertIconInfo:
-                
-                imageName = [bundle pathForResource:@"OpinionzAlertIconInfo" ofType:@"png"];
+                // imageName = [bundle pathForResource:@"OpinionzAlertIconInfo" ofType:@"png"];
+                imageName = @"OpinionzAlertIconInfo";
+                headerColor = [UIColor colorWithRed:0.89 green:0.49 blue:0.19 alpha:1];
                 break;
             case OpinionzAlertIconWarning:
-                imageName = [bundle pathForResource:@"OpinionzAlertIconWarning" ofType:@"png"];
+                imageName = @"OpinionzAlertIconWarning";
+                headerColor = [UIColor colorWithRed:0.79 green:0.14 blue:0.17 alpha:1];
+                // imageName = [bundle pathForResource:@"OpinionzAlertIconWarning" ofType:@"png"];
                 break;
             case OpinionzAlertIconSuccess:
-                imageName = [bundle pathForResource:@"OpinionzAlertIconSuccess" ofType:@"png"];
+                imageName = @"OpinionzAlertIconSuccess";
+                headerColor = [UIColor colorWithRed:0.15 green:0.68 blue:0.38 alpha:1];
+                // imageName = [bundle pathForResource:@"OpinionzAlertIconSuccess" ofType:@"png"];
                 break;
             case OpinionzAlertIconQuestion:
-                imageName = [bundle pathForResource:@"OpinionzAlertIconQuestion" ofType:@"png"];
+                imageName = @"OpinionzAlertIconQuestion";
+                headerColor = [UIColor colorWithRed:0.29 green:0.67 blue:0.97 alpha:1];
+                // imageName = [bundle pathForResource:@"OpinionzAlertIconQuestion" ofType:@"png"];
                 break;
             case OpinionzAlertIconStar:
-                imageName = [bundle pathForResource:@"OpinionzAlertIconStar" ofType:@"png"];
+                imageName = @"OpinionzAlertIconStar";
+                headerColor = [UIColor colorWithRed:0.31 green:0.67 blue:0.96 alpha:1];
+                // imageName = [bundle pathForResource:@"OpinionzAlertIconStar" ofType:@"png"];
                 break;
             case OpinionzAlertIconHeart:
-                imageName = [bundle pathForResource:@"OpinionzAlertIconHeart" ofType:@"png"];
+                imageName = @"OpinionzAlertIconHeart";
+                headerColor = [UIColor colorWithRed:0.61 green:0.36 blue:0.7 alpha:1];
+                // imageName = [bundle pathForResource:@"OpinionzAlertIconHeart" ofType:@"png"];
                 break;
             default:
                 break;
         }
         
-        [self.iconImageView setImage:[[UIImage alloc] initWithContentsOfFile:imageName]];
+        [self.iconImageView setImage:[[UIImage alloc] initWithContentsOfFile:[bundle pathForResource:imageName ofType:@"png"]]];
+        [self.headerView setBackgroundColor:headerColor];
     }
     else {
         
@@ -431,8 +466,8 @@
 - (CGFloat)boundingRectHeightWithText:(NSString *)text font:(UIFont *)font {
     CGSize maximumSize = CGSizeMake(270, CGFLOAT_MAX);
     CGRect boundingRect = [text boundingRectWithSize:maximumSize
-                                                options:NSStringDrawingUsesLineFragmentOrigin
-                                             attributes:@{ NSFontAttributeName : font} context:nil];
+                                             options:NSStringDrawingUsesLineFragmentOrigin
+                                          attributes:@{ NSFontAttributeName : font} context:nil];
     return boundingRect.size.height + 10;
 }
 

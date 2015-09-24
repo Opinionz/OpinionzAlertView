@@ -18,7 +18,7 @@ OpinionzAlertView is available through [CocoaPods](http://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'OpinionzAlertView', '~> 0.2.0'
+pod 'OpinionzAlertView', '~> 0.3.0'
 ```
 
 ###Manual
@@ -59,6 +59,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
     //                                 usingBlockWhenTapButton:^(OpinionzAlertView *alertView, NSInteger buttonIndex) {
     //                                     
     //                                     NSLog(@"Tapped button at index : %li", (long)buttonIndex);
+    //                                     NSLog(@"buttonTitle: %@", [alertView buttonTitleAtIndex:buttonIndex]);
     //                                 }];
 
     [alertView show];
@@ -139,6 +140,8 @@ The OpinionzAlertView class has following methods:
 - (void)show;
 
 - (void)dismiss;
+
+- (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex;
 ```
 
 Supported OS & SDK Versions
@@ -151,14 +154,6 @@ ARC Compatibility
 ------------------
 
 OpinionzAlertView requires ARC. 
-
-
-Release Notes
-----------------
-
-Version 0.2.0
-
-- Initial version.
 
 ## Author
 

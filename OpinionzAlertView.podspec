@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "OpinionzAlertView"
-    s.version          = "0.2.0"
+    s.version          = "0.3.0"
     s.summary          = "OpinionzAlertView: Beautiful customizable alert view with blocks (and delegate)"
     s.description      = <<-DESC
     Beautiful customizable alert view with blocks. Choose from predefined icons for info, warning, success and error alerts. Customize color or set your desired image.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.homepage         = "https://opinionz.github.io/OpinionzAlertView"
     # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
     s.license          = 'MIT'
-    s.author           = { "Armen" => "armen.mkrtchian@gmail.com", "Tolik" => "tolik.petrosyants@gmail.com" }
+    s.author           = { "Opinionz.io" => "support@opinionz.io"}
     s.source           = { :git => "https://github.com/Opinionz/OpinionzAlertView.git", :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

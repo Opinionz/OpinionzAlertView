@@ -93,7 +93,7 @@
         // buttons height calculation
         CGFloat buttonsHeight = 0;
         
-        if (cancelButtonTitle) {
+        if (cancelButtonTitle || [otherButtonTitles count] == 1) {
             buttonsHeight = kOpinionzButtonHeight;
         }
         
@@ -179,7 +179,7 @@
 
         // adds border between 2 buttons
         if ((cancelButtonTitle && [otherButtonTitles count] == 1) ||
-            ([otherButtonTitles count] <= 2 && !cancelButtonTitle)) {
+            ([otherButtonTitles count] == 2 && !cancelButtonTitle)) {
             CALayer *centerBorder = [CALayer layer];
             centerBorder.frame = CGRectMake((CGRectGetWidth(buttonView.frame) - 0.5)/2, 0.0f, 0.5f, CGRectGetHeight(buttonView.frame));
             centerBorder.backgroundColor = kOpinionzSeparatorColor.CGColor;

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "OpinionzAlertView"
-    s.version          = "0.3.0"
+    s.version          = "0.3.1"
     s.summary          = "OpinionzAlertView: Beautiful customizable alert view with blocks (and delegate)"
     s.description      = <<-DESC
     Beautiful customizable alert view with blocks. Choose from predefined icons for info, warning, success and error alerts. Customize color or set your desired image.

@@ -373,9 +373,9 @@
                 // imageName = [bundle pathForResource:@"OpinionzAlertIconSuccess" ofType:@"png"];
                 break;
             case OpinionzAlertIconQuestion:
-                imageName = @"OpinionzAlertIconQuestion";
+                imageName = @"OpinionzAlertIconQuestions";
                 headerColor = [UIColor colorWithRed:0.29 green:0.67 blue:0.97 alpha:1];
-                // imageName = [bundle pathForResource:@"OpinionzAlertIconQuestion" ofType:@"png"];
+                // imageName = [bundle pathForResource:@"OpinionzAlertIconQuestions" ofType:@"png"];
                 break;
             case OpinionzAlertIconStar:
                 imageName = @"OpinionzAlertIconStar";

@@ -331,10 +331,6 @@
     
     self.headerView.backgroundColor = self.color ? self.color : kOpinionzDefaultHeaderColor;
     
-    
-    // [iconImageView setImage:[[UIImage alloc] initWithContentsOfFile:imageName]];
-    // [iconImageView setImage:icon];
-
     if (self.icon) {
         [self.iconImageView setImage:self.icon];
     }
@@ -392,7 +388,9 @@
         }
         
         [self.iconImageView setImage:[[UIImage alloc] initWithContentsOfFile:[bundle pathForResource:imageName ofType:@"png"]]];
-        [self.headerView setBackgroundColor:headerColor];
+        if (!self.color) {
+            [self.headerView setBackgroundColor:headerColor];
+        }
     }
     else {
         

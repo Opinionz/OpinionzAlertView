@@ -91,9 +91,28 @@
     [alert show];
 }
 
+- (IBAction)networkAction:(id)sender {
+    
+    UIImage * tempImage = [UIImage imageNamed:@"temoImage.png"] ;
+    
+    OpinionzAlertView * alert = [[OpinionzAlertView alloc] initWithTitle:@"Network alert" message:@"This header image is displayed from a remote server" cancelButtonTitle:@"Dismiss" otherButtonTitles:nil defaultHeaderIcon:tempImage] ;
+    
+    [alert setColor:[UIColor clearColor]] ;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *url = [NSURL URLWithString:@"http://www.pngall.com/wp-content/uploads/2016/07/Success-PNG-Image.png"];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *img = [[UIImage alloc] initWithData:data];
+        
+        [alert updateHeaderIconWithImage:img] ;
+        
+    });
+    
+    [alert show] ;
+}
 // MARK: OpinionzAlertViewDelegate
 
-- (void)alertView:(OpinionzAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+- (void)opinionzAlertView:(OpinionzAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     NSLog(@"buttonIndex: %li", (long)buttonIndex);
     NSLog(@"buttonTitle: %@", [alertView buttonTitleAtIndex:buttonIndex]);

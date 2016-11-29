@@ -38,6 +38,12 @@ typedef void (^OpinionzPopupViewTapButtonBlock)(OpinionzAlertView *alertView, NS
 
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSArray *)otherButtonTitles
+            defaultHeaderIcon:(UIImage *)defaultIcon;
+
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
                      delegate:(id /*<OpinionzAlertViewDelegate>*/)delegate
             cancelButtonTitle:(NSString *)cancelButtonTitle
             otherButtonTitles:(NSArray *)otherButtonTitles;
@@ -52,10 +58,17 @@ typedef void (^OpinionzPopupViewTapButtonBlock)(OpinionzAlertView *alertView, NS
 
 - (void)dismiss;
 
+/**
+ Call this method to update the icon header image after the alert has been displayed, a common scenario to use this method is when you need to display a header image that is retrieved from a remote URL asynchronously , or when a specafic action happens after some time interval has passed .
+ 
+ @param image the new header image.
+ */
+-(void)updateHeaderIconWithImage:(UIImage *)image;
+
 - (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex;
 
 @end
 
 @protocol OpinionzAlertViewDelegate <NSObject>
-- (void)alertView:(OpinionzAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+- (void)opinionzAlertView:(OpinionzAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 @end

@@ -66,6 +66,19 @@
 
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSArray *)otherButtonTitles
+            defaultHeaderIcon:(UIImage *)defaultIcon
+{
+    self = [self initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles];
+    
+    self.icon = defaultIcon ;
+    
+    return self ;
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
                      delegate:(id /*<OpinionzAlertViewDelegate>*/)delegate
             cancelButtonTitle:(NSString *)cancelButtonTitle
             otherButtonTitles:(NSArray *)otherButtonTitles
@@ -304,7 +317,7 @@
 
 - (void)alertButtonDidTapped:(UIButton *)button {
     if (self.delegate != nil) {
-        [self.delegate alertView:self clickedButtonAtIndex:button.tag];
+        [self.delegate opinionzAlertView:self clickedButtonAtIndex:button.tag] ;
     }
     
     if (self.buttonDidTappedBlock != nil) {
@@ -432,6 +445,12 @@
                      completion:^(BOOL finished){
                          [self performSelector:@selector(removeFromSuperview) withObject:self];
                      }];
+}
+
+-(void)updateHeaderIconWithImage:(UIImage *)image
+{
+    self.icon = image ;
+    self.iconImageView.image = self.icon ;
 }
 
 // MARK: Helpers
